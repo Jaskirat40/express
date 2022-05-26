@@ -1,8 +1,11 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 import express from "express";
 
+const username = encodeURIComponent("jaskirat");
+const password = encodeURIComponent("_Ttrz_59ZYuQiyC");
+
 const uri =
-  "mongodb://localhost:27017";
+  `mongodb+srv://${username}:${password}@cluster0.jxs33.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
