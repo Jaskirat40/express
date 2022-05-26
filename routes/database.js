@@ -162,7 +162,7 @@ databaseRouter.post("/additem/:dbname/:collection", async (req, res) => {
         .end();
     }
   } catch (error) {
-    res.status(500).json({ message: error.message }).end();
+    res.status(400).json({ message: error.message }).end();
   } finally {
     await client.close();
   }
